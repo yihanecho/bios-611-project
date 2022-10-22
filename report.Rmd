@@ -1,0 +1,15 @@
+---
+title: "Labor Market of the United States in 2020"
+author: "Yihan Tang"
+
+header-includes:
+  - \usepackage{wrapfig}
+  - \usepackage{lipsum}
+  - \usepackage{float}
+output: 
+  pdf_document:
+    keep_tex: true
+urlcolor: blue
+---
+
+
