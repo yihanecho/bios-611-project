@@ -1,5 +1,5 @@
 FROM rocker/verse
-MAINTAINER Yating Zou <yating@ad.unc.edu>
+MAINTAINER yihant <yihant@ad.unc.edu>
 
 WORKDIR /
 RUN R -e "install.packages(c('readr','stringr','tidyr','dplyr'))"
