@@ -19,3 +19,8 @@ docker run -e PASSWORD=<some_password> --rm -v $(pwd):/home/rstudio/ -p 8787:878
 https://localhost:8787 in your browser. Log in with username `rstudio` and the password you entered after `PASSWORD=`.
 
 
+#### Generate Results
+ - Type `make report.pdf` in the terminal to create the final report.
+ - Each R script generates the figures for a particular section. If interested in the analysis in a particular section, run load_data.R first, and then the R script for that section.
+
+
