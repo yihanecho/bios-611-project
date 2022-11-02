@@ -1,4 +1,4 @@
-library(tidyverse)
+#library(tidyverse)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
@@ -16,7 +16,7 @@ Df_num  <- dat_fetal %>%
   gather(variable, values, 1:dim(dat_fetal)[2])
 
 
-Df_num %>% ggplot() +
+p1 <- Df_num %>% ggplot() +
   geom_boxplot(aes(x = variable, y = values)) +
   facet_wrap(~variable, ncol = 6, scales = "free")+
  theme(strip.text.x = element_blank(), text = element_text(size = 9))+
