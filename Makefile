@@ -14,10 +14,18 @@ report.pdf:\
 
 
 figures/figure1.png\
-figures/figure2.png:\
+figures/figure12.png\
+figures/figure13.png:\
  analysis_section1.R\
+source_data/fetal_health.csv\
  derived_data/fetal_health_new.csv
 	Rscript analysis_section1.R
+
+figures/figure23.png\
+figures/figure22.png:\
+ analysis_section2.R\
+source_data/fetal_health.csv
+	Rscript analysis_section2.R
 
 derived_data/fetal_health_new.csv:\
  load_data.R\

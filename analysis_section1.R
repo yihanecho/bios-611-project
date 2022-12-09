@@ -22,9 +22,9 @@ p1 <- Df_num %>% ggplot() +
  theme(strip.text.x = element_blank(), text = element_text(size = 9))+
   theme_minimal()
 
-png(filename = "./figures/figure1.png", width = 1000, height = 850, units = "px")
-p <- grid.arrange(p1, ncol = 1)
-dev.off()
+#png(filename = "./figures/figure1.png", width = 1000, height = 850, units = "px")
+#p <- grid.arrange(p1, ncol = 1)
+#dev.off()
 
 
 ## Selective Distribution by fetal Health
@@ -53,9 +53,24 @@ dev.off()
 
 
 
+png(filename = "./figures/figure12.png", width = 1000, height = 850, units = "px")
+target <- 'fetal_health'
+dat_fetal[,target] <- as.factor(dat_fetal[,target])
+plot(dat_fetal[,target])
+grid()
+dev.off()
 
 
 
+
+######correlation analysis 
+# correlation (Spearman)
+features <- setdiff(colnames(dat_fetal),'fetal_health')
+options(repr.plot.width = 14, repr.plot.height = 8) # => bigger plots for the following
+cor_features_SP <- cor(dat_fetal[,features], method='spearman')
+png(filename = "./figures/figure13.png", width = 1000, height = 850, units = "px")
+corrplot::corrplot(cor_features_SP, tl.cex=0.6)
+dev.off()
 
 
 
